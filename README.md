@@ -23,12 +23,14 @@ The predictive engine utilizes a tuned **Random Forest Classifier** optimized fo
   * **LOW RISK:** Precision: 0.96 | Recall: 0.95
   * **MEDIUM RISK:** Precision: 0.93 | Recall: 0.94
   * **HIGH RISK:** Precision: 0.97 | Recall: 0.98 (Engineered for high sensitivity to eliminate false negatives on severe exhaustion).
+* **Deterministic Safety Overrides:** Integrates hard domain rule guardrails where 7-day chronic duty averages exceeding 14 hours or acute sleep deprivation instantly enforce a `HIGH RISK` classification regardless of probabilistic drift.
 
 ## 🗂️ Repository Structure
-├── FastAPI.py                  # FastAPI backend prediction service
-├── app.py            # Streamlit command center UI & gauge interface
-├── Data_gen.py             # Synthetic operational dataset generation engine
+```text
+├── app.py                  # FastAPI backend prediction service
+├── dashboard.py            # Streamlit command center UI & gauge interface
+├── data_gen.py             # Synthetic operational dataset generation engine
 ├── model_training.py       # Random Forest training and feature serialization
-├── rf_model.pkl        # Serialized production Random Forest model
+├── sih_rf_model.pkl        # Serialized production Random Forest model
 ├── model_features.pkl      # Saved feature encoder schema mapping
 └── requirements.txt        # Project dependencies
