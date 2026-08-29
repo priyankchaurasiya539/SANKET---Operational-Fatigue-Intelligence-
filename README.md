@@ -2,11 +2,12 @@
 *Ministry of Home Affairs (MHA) | Operational Wellness & Risk Engine*
 
 ## 🔬 Research & Background
-The architecture of SANKET is built upon empirical research and operational constraints derived from military psychology, occupational health studies on shift work sleep disorder, and Central Armed Police Forces (CAPF) deployment stressors. Key research vectors integrated into the scoring matrix include:
-* **Circadian Disruption & Acute Sleep Debt:** Aligning with clinical thresholds correlating sub-6-hour sleep windows with cognitive degradation, slowed reaction times, and operational error rates in high-stakes environments.
-* **Chronic Overload Dynamics:** Factoring in 7-day rolling average duty hour thresholds to capture cumulative psychological and physiological burnout that single-day assessment models fail to register.
-* **Environmental Stress Multipliers:** Quantifying extreme meteorological variables, including sub-zero sub-freezing temperatures in High-Altitude sectors and high-heat operational stress in Naxal-affected forest zones.
-* **Communication Isolation Penalty:** Accounting for the compounding psychological strain experienced by personnel during communication blackouts in remote tactical outposts.
+SANKET is designed using studies on military behavior, sleep problems, and real-life stress faced by Central Armed Police Forces (CAPF). The main factors included in its system are:
+
+* **Sleep Problems & Lack of Sleep:** Sleeping less than 6 hours leads to poor concentration, slower reactions, and more mistakes in dangerous situations.
+* **Long-Term Burnout:** Tracking work hours over a 7-day period to measure total mental and physical tiredness that checking just a single day would miss.
+* **Extreme Weather Stress:** Factoring in harsh weather conditions, such as freezing cold in high mountains or heavy heat in forest deployment zones.
+* **Loss of Communication:** Accounting for the extra mental stress when personnel are cut off from communication in remote camps.
 
 ## ⚙️ Tech Stack
 * **Backend Framework:** FastAPI, Pydantic (Strict payload validation and schema enforcement)
