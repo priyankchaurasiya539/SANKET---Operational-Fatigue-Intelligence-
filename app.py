@@ -3,6 +3,21 @@ import requests
 import plotly.graph_objects as go
 import numpy as np
 
+import threading
+import uvicorn
+from FastAPI import app as fastapi_app  # Tera FastAPI app object
+
+@st.cache_resource
+def start_fastapi_server():
+    thread = threading.Thread(
+        target=lambda: uvicorn.run(fastapi_app, host="127.0.0.1", port=8000, log_level="warning"),
+        daemon=True
+    )
+    thread.start()
+    return thread
+
+start_fastapi_server()
+
 # Page Configuration
 st.set_page_config(
     page_title="SANKET - Personnel Wellness System",
