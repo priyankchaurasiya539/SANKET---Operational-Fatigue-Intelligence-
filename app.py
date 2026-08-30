@@ -87,8 +87,8 @@ with st.form("jawan_form"):
     col1, col2 = st.columns(2, gap="medium")
     
     with col1:
-        duty_hours = st.slider("Duty Hours Today", 0.0, 24.0, 10.0, step=0.5)
-        sleep_duration = st.slider("Sleep Duration (Hours)", 0.0, 24.0, 6.0, step=0.5)
+        duty_hours = st.slider("Duty Hours Today", min_value=0.0, max_value=16.0, value=8.0)
+        sleep_duration = st.slider("Sleep Duration (Hours)", min_value=0.0, max_value=14.0, value=7.0)
         temperature_c = st.number_input("Environment Temperature (°C)", min_value=-50.0, max_value=60.0, value=25.0, step=1.0)
         service_years = st.number_input("Service Years", min_value=0, max_value=45, value=5, step=1)
         
@@ -99,7 +99,7 @@ with st.form("jawan_form"):
         connectivity_status = st.selectbox("Connectivity Status", ["Full", "Blackout"])
 
     st.markdown("---")
-    avg_duty_7d = st.slider("📉 7-Day Average Duty Hours (Chronic Load)", 0.0, 24.0, 6.0, step=0.5)
+    avg_duty_7d = st.slider("📉 7-Day Average Duty Hours (Chronic Load)", 0.0, 16.0, 6.0, step=0.5)
     
     st.markdown("")
     submit_button = st.form_submit_button(label="🚀 Evaluate Fatigue Risk", use_container_width=True)
