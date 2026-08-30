@@ -1,4 +1,4 @@
-# SANKET: Operational Fatigue Intelligence Platform
+ # SANKET: Operational Fatigue Intelligence Platform
 *Ministry of Home Affairs (MHA) | Operational Wellness & Risk Engine*
 
 ## 🔬 Research & Background
@@ -26,10 +26,10 @@ The predictive engine utilizes a tuned **Random Forest Classifier** optimized fo
 
 ## 🗂️ Repository Structure
 ```text
-├── app.py                  # FastAPI backend prediction service
-├── dashboard.py            # Streamlit command center UI & gauge interface
+├── FastAPI.py                  # FastAPI backend prediction service
+├── app.py            # Streamlit command center UI & gauge interface
 ├── data_gen.py             # Synthetic operational dataset generation engine
 ├── model_training.py       # Random Forest training and feature serialization
-├── sih_rf_model.pkl        # Serialized production Random Forest model
+├── rf_model.pkl        # Serialized production Random Forest model
 ├── model_features.pkl      # Saved feature encoder schema mapping
 └── requirements.txt        # Project dependencies
